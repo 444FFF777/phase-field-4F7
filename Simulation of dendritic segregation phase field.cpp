@@ -51,7 +51,7 @@ void energy_curve(std::vector<double> f_list, double kappa, std::string file_pat
     }
     ofs.close();
 }
-//ÒÔÉÏÎªÎÄ¼şÉèÖÃ·½·¨£¬¿ÉÖ±½ÓÊ¹ÓÃ
+//ä»¥ä¸Šä¸ºæ–‡ä»¶è®¾ç½®æ–¹æ³•ï¼Œå¯ç›´æ¥ä½¿ç”¨
 double laplacian(double cl, double cr, double cd, double cu, double cc, double dx) {
     return (cl + cr + cd + cu - 4.0 * cc) / (dx * dx);
 }
