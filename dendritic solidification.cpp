@@ -67,11 +67,11 @@ double dphi_dy(double phiu, double phil, double dy) {
 }
 
 double epsilon( double dphi_dx, double dphi_dy) {
-    // ¼ÆËãÌİ¶È·½ÏòµÄ½Ç¶È
+    // è®¡ç®—æ¢¯åº¦æ–¹å‘çš„è§’åº¦
     double jj = 4,  theta_0 = 0.2,  delta = 0.02,  epsilon_0 = 0.01;
-    double theta = atan2(dphi_dy, dphi_dx);  // atan2 ¿É±ÜÃâ³ıÒÔÁãµÄÇé¿ö
+    double theta = atan2(dphi_dy, dphi_dx);  // atan2 å¯é¿å…é™¤ä»¥é›¶çš„æƒ…å†µ
 
-    // ¼ÆËã epsilon
+    // è®¡ç®— epsilon
     return epsilon_0 * (1 + delta * cos(jj * (theta - theta_0)));
 }
 double df_dphi(double phi, double T) {
@@ -88,7 +88,7 @@ double depisilon_dtheta(double dphi_dx, double dphi_dy) {
 
 
 int main() {
-    //ÉèÖÃËÄ¸öÍø¸ñ
+    //è®¾ç½®å››ä¸ªç½‘æ ¼
     std::vector<std::vector<double>> phi_mesh(300, std::vector<double>(300, 0));
     std::vector<std::vector<double>> temp_mesh(300, std::vector<double>(300, 0));
     std::vector<std::vector<double>> custom_1(300, std::vector<double>(300, 0));
@@ -97,7 +97,7 @@ int main() {
 
 
 
-    //³õÊ¼»¯Íø¸ñ
+    //åˆå§‹åŒ–ç½‘æ ¼
     for (int i = 0; i < 300; i++) {
         for (int j = 0; j < 300; j++) {
             if (
